@@ -91,16 +91,16 @@ export default function DossierDrawer({ open, onClose }: DossierDrawerProps) {
               </div>
 
               {/* Quick stats */}
-              <div className="grid grid-cols-3 gap-3">
+              <div className="grid grid-cols-3 gap-2 sm:gap-3">
                 {[
                   { label: "CGPA", value: "8.21", sub: "1st Div Honors" },
                   { label: "DSA Solved", value: "800+", sub: "GFG #3 · LeetCode" },
                   { label: "Availability", value: "Immediate", sub: "Open to Work" },
                 ].map((s) => (
-                  <div key={s.label} className="glass rounded-xl p-3 text-center gradient-border">
-                    <div className="text-lg font-bold text-[var(--accent-green)]">{s.value}</div>
-                    <div className="text-xs font-semibold text-white mt-0.5">{s.label}</div>
-                    <div className="text-[10px] text-[#475569] mt-0.5">{s.sub}</div>
+                  <div key={s.label} className="glass rounded-xl p-2.5 sm:p-3 text-center gradient-border flex flex-col justify-center min-w-0">
+                    <div className="text-base sm:text-lg font-bold text-[var(--accent-green)] truncate">{s.value}</div>
+                    <div className="text-[11px] sm:text-xs font-semibold text-white mt-0.5 truncate">{s.label}</div>
+                    <div className="text-[9px] sm:text-[10px] text-[#475569] mt-0.5 truncate">{s.sub}</div>
                   </div>
                 ))}
               </div>
