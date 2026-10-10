@@ -348,9 +348,10 @@ export default function ChatInterface() {
             </div>
             <h1 className="text-base font-bold text-white">{PROFILE.name}</h1>
             <p className="text-xs mt-0.5 leading-relaxed font-medium" style={{ color: "var(--accent-green)" }}>{PROFILE.tagline}</p>
-            <div className="mt-2 px-3 py-1.5 rounded-full text-[10px] font-medium"
+            <div className="mt-2 px-3 py-1.5 rounded-full text-[10px] font-medium flex items-center justify-center gap-1.5"
               style={{ background: "rgba(255,255,255,0.04)", border: "1px solid var(--border-glow)", color: "var(--accent-green)" }}>
-              🟢 {PROFILE.status.noticePeriod}
+              <span className="w-1.5 h-1.5 rounded-full pulse-status inline-block" style={{ background: "var(--accent-green)" }} />
+              <span>{PROFILE.status.noticePeriod}</span>
             </div>
           </div>
         </div>
