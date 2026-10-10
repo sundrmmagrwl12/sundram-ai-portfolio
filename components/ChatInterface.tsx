@@ -582,17 +582,17 @@ export default function ChatInterface() {
           </div>
 
           <div className="flex items-center gap-1.5 sm:gap-2">
-            {/* Mobile: Dossier btn */}
+            {/* Mobile: Recruiter View btn */}
             <button
               onClick={() => {
                 setDrawerOpen(true);
                 soundManager.playSwoosh();
               }}
-              className="md:hidden flex items-center gap-1 px-2.5 py-1.5 rounded-lg text-xs font-semibold cursor-pointer transition-all active:scale-95"
+              className="md:hidden flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg text-xs font-semibold cursor-pointer transition-all active:scale-95"
               style={{ background: "var(--border-glow)", border: "1px solid var(--accent-green)", color: "var(--accent-green)" }}
             >
               <Layers size={13} />
-              <span>Dossier</span>
+              <span>Recruiter View</span>
             </button>
             <button
               onClick={reset}
