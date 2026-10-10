@@ -627,10 +627,10 @@ export default function ChatInterface() {
                     </div>
                   ) : (
                     <div
-                      className="w-8 h-8 rounded-full flex items-center justify-center"
-                      style={{ background: "rgba(0,212,255,0.1)", border: "1.5px solid rgba(0,212,255,0.3)" }}
+                      className="w-8 h-8 rounded-full flex items-center justify-center transition-colors duration-300"
+                      style={{ background: "color-mix(in srgb, var(--accent-cyan) 12%, transparent)", border: "1.5px solid color-mix(in srgb, var(--accent-cyan) 35%, transparent)" }}
                     >
-                      <User size={14} className="text-[#00d4ff]" />
+                      <User size={14} style={{ color: "var(--accent-cyan)" }} />
                     </div>
                   )}
                 </div>
@@ -638,12 +638,12 @@ export default function ChatInterface() {
                 {/* Bubble */}
                 <div className={`flex flex-col gap-1 ${msg.role === "user" ? "items-end" : "items-start"} max-w-[85%]`}>
                   <div
-                    className="rounded-2xl px-4 py-3 relative group"
+                    className="rounded-2xl px-4 py-3 relative group transition-colors duration-300"
                     style={
                       msg.role === "user"
                         ? {
-                            background: "rgba(0,212,255,0.08)",
-                            border: "1px solid rgba(0,212,255,0.2)",
+                            background: "color-mix(in srgb, var(--accent-cyan) 8%, transparent)",
+                            border: "1px solid color-mix(in srgb, var(--accent-cyan) 25%, transparent)",
                             borderBottomRightRadius: "4px",
                           }
                         : {
