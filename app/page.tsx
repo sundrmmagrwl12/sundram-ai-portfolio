@@ -4,16 +4,16 @@ import ParticleBackground from "@/components/ParticleBackground";
 
 export default function Home() {
   return (
-    <main className="relative h-screen w-screen overflow-hidden circuit-bg">
+    <main className="relative h-[100dvh] w-screen overflow-hidden circuit-bg">
       {/* Animated particle canvas background */}
       <ParticleBackground />
 
       {/* Custom glowing cursor */}
       <CustomCursor />
 
-      {/* Ambient glow orbs */}
+      {/* Ambient glow orbs - desktop only to prevent mobile overflow */}
       <div
-        className="fixed pointer-events-none"
+        className="hidden md:block fixed pointer-events-none"
         style={{
           width: "600px",
           height: "600px",
@@ -24,7 +24,7 @@ export default function Home() {
         }}
       />
       <div
-        className="fixed pointer-events-none"
+        className="hidden md:block fixed pointer-events-none"
         style={{
           width: "500px",
           height: "500px",
@@ -36,7 +36,7 @@ export default function Home() {
       />
 
       {/* Main Chat Interface — positioned above canvas */}
-      <div className="relative z-10 h-screen w-screen">
+      <div className="relative z-10 h-[100dvh] w-screen">
         <ChatInterface />
       </div>
     </main>

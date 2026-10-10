@@ -321,7 +321,7 @@ export default function ChatInterface() {
     : [];
 
   return (
-    <div className="flex h-screen w-full overflow-hidden" style={{ background: "var(--bg-primary)" }}>
+    <div className="flex h-[100dvh] w-full overflow-hidden" style={{ background: "var(--bg-primary)" }}>
       {/* ─── Left Sidebar ─── */}
       <motion.aside
         className="hidden md:flex flex-col w-[280px] flex-shrink-0 border-r border-[var(--border-glow)] overflow-y-auto sidebar-scroll"
@@ -482,13 +482,13 @@ export default function ChatInterface() {
       <div className="flex flex-col flex-1 min-w-0">
         {/* Top navbar */}
         <motion.header
-          className="flex items-center justify-between px-5 py-3.5 border-b border-[var(--border-glow)] flex-shrink-0"
+          className="flex items-center justify-between px-3 sm:px-5 py-2.5 sm:py-3.5 border-b border-[var(--border-glow)] flex-shrink-0"
           style={{ background: "rgba(8,12,20,0.9)", backdropFilter: "blur(16px)" }}
           initial={{ y: -60, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.5, delay: 0.1 }}
         >
-          <div className="flex items-center gap-3">
+          <div className="flex items-center gap-1.5 sm:gap-3">
             {/* Theme switcher capsule with generous click target */}
             <div
               className="flex items-center gap-0.5 p-0.5 rounded-full border"
@@ -500,11 +500,11 @@ export default function ChatInterface() {
               <button
                 type="button"
                 onClick={() => changeTheme("violet")}
-                className="w-7 h-7 rounded-full flex items-center justify-center hover:bg-[rgba(192,132,252,0.18)] transition-all cursor-pointer"
+                className="w-6 h-6 sm:w-7 sm:h-7 rounded-full flex items-center justify-center hover:bg-[rgba(192,132,252,0.18)] transition-all cursor-pointer"
                 title="Switch to Cyberpunk Violet Theme"
               >
                 <span
-                  className={`w-3.5 h-3.5 rounded-full bg-[#c084fc] transition-all duration-200 ${
+                  className={`w-3 sm:w-3.5 h-3 sm:h-3.5 rounded-full bg-[#c084fc] transition-all duration-200 ${
                     theme === "violet"
                       ? "ring-2 ring-white scale-125 shadow-[0_0_12px_#c084fc]"
                       : "opacity-60 hover:opacity-100 hover:scale-110"
@@ -514,11 +514,11 @@ export default function ChatInterface() {
               <button
                 type="button"
                 onClick={() => changeTheme("amber")}
-                className="w-7 h-7 rounded-full flex items-center justify-center hover:bg-[rgba(251,191,36,0.18)] transition-all cursor-pointer"
+                className="w-6 h-6 sm:w-7 sm:h-7 rounded-full flex items-center justify-center hover:bg-[rgba(251,191,36,0.18)] transition-all cursor-pointer"
                 title="Switch to Sunset Amber Theme"
               >
                 <span
-                  className={`w-3.5 h-3.5 rounded-full bg-[#fbbf24] transition-all duration-200 ${
+                  className={`w-3 sm:w-3.5 h-3 sm:h-3.5 rounded-full bg-[#fbbf24] transition-all duration-200 ${
                     theme === "amber"
                       ? "ring-2 ring-white scale-125 shadow-[0_0_12px_#fbbf24]"
                       : "opacity-60 hover:opacity-100 hover:scale-110"
@@ -528,11 +528,11 @@ export default function ChatInterface() {
               <button
                 type="button"
                 onClick={() => changeTheme("emerald")}
-                className="w-7 h-7 rounded-full flex items-center justify-center hover:bg-[rgba(0,255,136,0.18)] transition-all cursor-pointer"
+                className="w-6 h-6 sm:w-7 sm:h-7 rounded-full flex items-center justify-center hover:bg-[rgba(0,255,136,0.18)] transition-all cursor-pointer"
                 title="Switch to Matrix Emerald Theme"
               >
                 <span
-                  className={`w-3.5 h-3.5 rounded-full bg-[#00ff88] transition-all duration-200 ${
+                  className={`w-3 sm:w-3.5 h-3 sm:h-3.5 rounded-full bg-[#00ff88] transition-all duration-200 ${
                     theme === "emerald"
                       ? "ring-2 ring-white scale-125 shadow-[0_0_12px_#00ff88]"
                       : "opacity-60 hover:opacity-100 hover:scale-110"
@@ -541,13 +541,13 @@ export default function ChatInterface() {
               </button>
             </div>
 
-            <div className="h-4 w-[1px]" style={{ background: "var(--border-glow)" }} />
+            <div className="h-4 w-[1px] hidden xs:block" style={{ background: "var(--border-glow)" }} />
 
-            {/* Audio sound toggle */}
+            {/* Audio sound toggle - icon only on mobile, text on desktop */}
             <button
               type="button"
               onClick={toggleSound}
-              className="flex items-center gap-1.5 px-2.5 py-1 rounded-lg transition-all cursor-pointer border"
+              className="flex items-center gap-1 sm:gap-1.5 p-1.5 sm:px-2.5 sm:py-1 rounded-lg transition-all cursor-pointer border"
               style={
                 !soundMuted
                   ? {
@@ -565,41 +565,41 @@ export default function ChatInterface() {
               title={soundMuted ? "Audio: Muted (Click to turn ON)" : "Audio: Active (Click to Mute)"}
             >
               {soundMuted ? <VolumeX size={14} /> : <Volume2 size={14} />}
-              <span className="text-[10px] font-mono font-semibold tracking-wider">
+              <span className="text-[10px] font-mono font-semibold tracking-wider hidden sm:inline">
                 {soundMuted ? "MUTED" : "SOUND ON"}
               </span>
             </button>
 
-            <div className="h-4 w-[1px]" style={{ background: "var(--border-glow)" }} />
+            <div className="h-4 w-[1px] hidden sm:block" style={{ background: "var(--border-glow)" }} />
 
-            <div className="flex items-center gap-2">
+            <div className="items-center gap-2 hidden sm:flex">
               <Sparkles size={14} style={{ color: "var(--accent-green)" }} />
-              <span className="text-sm font-semibold text-white hidden sm:block">
+              <span className="text-sm font-semibold text-white">
                 Sundram<span style={{ color: "var(--accent-green)" }}>.AI</span>
               </span>
               <span className="text-xs text-[#475569] hidden md:block">— Portfolio Assistant</span>
             </div>
           </div>
 
-          <div className="flex items-center gap-2">
+          <div className="flex items-center gap-1.5 sm:gap-2">
             {/* Mobile: Dossier btn */}
             <button
               onClick={() => {
                 setDrawerOpen(true);
                 soundManager.playSwoosh();
               }}
-              className="md:hidden flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-medium cursor-pointer"
+              className="md:hidden flex items-center gap-1 px-2.5 py-1.5 rounded-lg text-xs font-semibold cursor-pointer transition-all active:scale-95"
               style={{ background: "var(--border-glow)", border: "1px solid var(--accent-green)", color: "var(--accent-green)" }}
             >
               <Layers size={13} />
-              Profile
+              <span>Dossier</span>
             </button>
             <button
               onClick={reset}
-              className="p-2 rounded-lg hover:bg-[rgba(255,255,255,0.06)] transition-colors text-[#475569] hover:text-[var(--accent-green)] cursor-pointer"
+              className="p-1.5 sm:p-2 rounded-lg hover:bg-[rgba(255,255,255,0.06)] transition-colors text-[#475569] hover:text-[var(--accent-green)] cursor-pointer"
               title="Reset chat"
             >
-              <RefreshCw size={15} />
+              <RefreshCw size={14} />
             </button>
           </div>
         </motion.header>
@@ -746,7 +746,7 @@ export default function ChatInterface() {
 
         {/* Input bar */}
         <motion.div
-          className="flex-shrink-0 px-4 pb-5 pt-3 relative"
+          className="flex-shrink-0 px-3 sm:px-4 pb-3 sm:pb-5 pt-2 sm:pt-3 relative"
           initial={{ y: 60, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.5, delay: 0.2 }}

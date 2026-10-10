@@ -120,16 +120,16 @@ export default function CustomCursor() {
 
   return (
     <>
-      {/* Center dot - precise 6px */}
+      {/* Center dot - precise 6px, hidden on touch/mobile */}
       <div
         ref={dotRef}
-        className="fixed top-0 left-0 w-[6px] h-[6px] rounded-full z-[99999] pointer-events-none cursor-dot"
+        className="hidden md:block fixed top-0 left-0 w-[6px] h-[6px] rounded-full z-[99999] pointer-events-none cursor-dot"
         style={{ willChange: "transform" }}
       />
-      {/* Outer trailing ring - compact 26px */}
+      {/* Outer trailing ring - compact 26px, hidden on touch/mobile */}
       <div
         ref={ringRef}
-        className="fixed top-0 left-0 w-[26px] h-[26px] rounded-full z-[99998] pointer-events-none cursor-ring"
+        className="hidden md:block fixed top-0 left-0 w-[26px] h-[26px] rounded-full z-[99998] pointer-events-none cursor-ring"
         style={{ willChange: "transform" }}
       />
     </>
