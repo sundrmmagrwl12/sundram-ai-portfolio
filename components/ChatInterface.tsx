@@ -87,8 +87,8 @@ export default function ChatInterface() {
       "--bg-card": "rgba(20, 13, 33, 0.8)",
       "--border-glow": "rgba(168, 85, 247, 0.25)",
       "--accent-green": "#c084fc",
-      "--accent-cyan": "#38bdf8",
-      "--accent-purple": "#a855f7",
+      "--accent-cyan": "#a855f7",
+      "--accent-purple": "#7c3aed",
     },
   };
 
