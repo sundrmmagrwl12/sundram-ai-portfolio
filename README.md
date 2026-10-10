@@ -1,36 +1,64 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# ⚡ Sundram Singhal — AI-Powered Portfolio
 
-## Getting Started
+> **Backend Developer / SDE-1** specializing in Distributed Systems, Java 17/21, Spring Boot 3, Apache Kafka, Redis, and AWS CI/CD Pipeline Automation.
 
-First, run the development server:
+[![Next.js](https://img.shields.io/badge/Next.js-16-black?style=flat-square&logo=next.js)](https://nextjs.org/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5.0-blue?style=flat-square&logo=typescript)](https://www.typescriptlang.org/)
+[![Tailwind CSS](https://img.shields.io/badge/TailwindCSS-4.0-38bdf8?style=flat-square&logo=tailwind-css)](https://tailwindcss.com/)
+[![Gemini AI](https://img.shields.io/badge/Google%20Gemini-2.0%20Flash-4285F4?style=flat-square&logo=google)](https://deepmind.google/technologies/gemini/)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+---
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🌟 Highlights
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- 🤖 **Interactive AI Recruiter Persona:** Trained exclusively on Sundram's engineering journey, architecture decisions, and verified achievements via Gemini 2.0 Flash.
+- ⚡ **Terminal Slash Commands:** Client-side commands (`/resume`, `/dossier`, `/projects`, `/skills`, `/dsa`, `/theme`) with keyboard shortcuts (`Ctrl+K` Recruiter Dossier, `/` chat focus).
+- 🎨 **Multi-Theme Cyberpunk Engine:** Matrix Emerald, Sunset Amber, and Cyberpunk Violet with synchronized procedural particles, glowing physics cursor, and Web Audio API synthesized tactile sound fx.
+- 🛡️ **ZeroMesh-UPI Deep Dive:** Architectural breakdown of ad-hoc Bluetooth mesh gossip protocol, RSA-2048/AES-256-GCM hybrid cryptography, and sub-millisecond Redis SETNX deduplication.
+- ☁️ **AWS DevOps 6-Day Track Proofs:** Verified day-by-day implementation evidence PDFs (IAM, EC2, CodeArtifact, CodeBuild, Deployment, CI/CD Pipeline).
+- 📊 **Verified DSA Track Record:** 800+ solved problems, GeeksforGeeks Institute Rank #3 (Lloyd Institute), and 385 LeetCode solved.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+## 🛠️ Tech Stack
 
-To learn more about Next.js, take a look at the following resources:
+| Layer | Technologies |
+|---|---|
+| **Frontend & UI** | Next.js 16 (Turbopack, App Router), React 19, TypeScript, Tailwind CSS v4, Framer Motion |
+| **AI Integration** | Google Generative AI SDK (`gemini-2.0-flash`), Custom Recruiter System Prompt, Edge Fallback Engine |
+| **Audio & Canvas** | Web Audio API Synthesizer (0 external audio assets), HTML5 Canvas Particle Engine |
+| **Core Engineering Stack** | Java 17/21, Spring Boot 3, Apache Kafka, Redis, PostgreSQL, Docker, AWS (IAM, EC2, CodeBuild, CodeArtifact) |
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 🚀 Getting Started
 
-## Deploy on Vercel
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/sundrmmagrwl12/sundram-ai-portfolio.git
+   cd sundram-ai-portfolio
+   ```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+2. **Install dependencies:**
+   ```bash
+   npm install
+   ```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+3. **Set up Environment Variables:**
+   Create a `.env.local` file in the root directory:
+   ```env
+   GEMINI_API_KEY=your_gemini_api_key_here
+   NEXT_PUBLIC_SITE_URL=https://sundram-portfolio.vercel.app
+   ```
+
+4. **Run development server:**
+   ```bash
+   npm run dev
+   ```
+   Open [http://localhost:3000](http://localhost:3000) to view the application.
+
+---
+
+## 📄 License & Attribution
+
+Designed and developed by **Sundram Singhal** © 2026. All rights reserved.
