@@ -167,6 +167,7 @@ export const PROFILE = {
         "Day 5: Production automated CI/CD deployment workflow",
         "Day 6: Build a CI/CD Pipeline with AWS (End-to-end multi-stage pipeline integration)",
       ],
+      completeProof: "/aws-proofs/aws-devops-complete-proofs.pdf",
       proofs: [
         { day: "Day 1", title: "IAM & EC2 Instance Setup", file: "/aws-proofs/day-1-iam-ec2.pdf" },
         { day: "Day 2", title: "GitHub + AWS DevOps Webhook", file: "/aws-proofs/day-2-aws-devops-github.pdf" },

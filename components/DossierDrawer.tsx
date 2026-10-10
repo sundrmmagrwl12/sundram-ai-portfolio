@@ -246,9 +246,28 @@ export default function DossierDrawer({ open, onClose }: DossierDrawerProps) {
 
                       {"proofs" in c && Array.isArray((c as any).proofs) && (
                         <div className="mt-3 pt-3 border-t border-[var(--border-glow)]">
-                          <p className="text-[10px] uppercase tracking-wider text-[var(--accent-green)] font-semibold mb-2 flex items-center gap-1.5">
-                            <span>📄 Verified Implementation Proofs:</span>
-                          </p>
+                          <div className="flex items-center justify-between mb-2">
+                            <p className="text-[10px] uppercase tracking-wider text-[var(--accent-green)] font-semibold flex items-center gap-1.5">
+                              <span>📄 Verified Implementation Proofs:</span>
+                            </p>
+                            {(c as any).completeProof && (
+                              <a
+                                href={(c as any).completeProof}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                onClick={() => soundManager.playBlip()}
+                                className="text-[10px] font-mono px-2 py-0.5 rounded-md flex items-center gap-1 transition-all hover:brightness-125"
+                                style={{
+                                  background: "var(--border-glow)",
+                                  color: "var(--accent-green)",
+                                  border: "1px solid var(--border-glow)",
+                                }}
+                                title="Open merged All-in-One PDF (Days 1–5)"
+                              >
+                                <span>All-in-One PDF ↗</span>
+                              </a>
+                            )}
+                          </div>
                           <div className="grid grid-cols-1 sm:grid-cols-2 gap-1.5">
                             {(c as any).proofs.map((proof: { day: string; title: string; file: string }) => (
                               <a

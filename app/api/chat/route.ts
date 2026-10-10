@@ -120,6 +120,7 @@ He completed a structured **6-day hands-on AWS DevOps challenge** through Nextwo
 - **GitHub Actions/Webhooks** — automated build triggers
 
 📄 **Verified Hands-on Implementation Proofs (View in New Tab):**
+- 🌟 [**All-in-One Master Proof Document (Days 1–5 Merged PDF)**](/aws-proofs/aws-devops-complete-proofs.pdf)
 - [**Day 1: IAM & EC2 Instance Proof (PDF)**](/aws-proofs/day-1-iam-ec2.pdf)
 - [**Day 2: GitHub + AWS DevOps Webhook Proof (PDF)**](/aws-proofs/day-2-aws-devops-github.pdf)
 - [**Day 3: AWS CodeArtifact Repo Proof (PDF)**](/aws-proofs/day-3-codeartifact.pdf)
